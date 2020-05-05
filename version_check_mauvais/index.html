@@ -1,0 +1,63 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js"></script>
+    <title>Morpion</title>
+</head>
+<body>
+    <header>
+        <h1>XooX</h1>
+    </header>
+
+    <main>
+        <div id="panneau">
+            <p>Bienvenue dans XooX. Veuillez choisir les noms des deux joueurs.</p>
+            <input type="text" id="choiceName1" placeholder="Player 1">
+            <button id="validerNom1">Valider</button>
+            <input type="text" id="choiceName2" placeholder="Player 2">
+            <button id="validerNom2">Valider</button>
+            <button id="startGame">Commencer le jeu</button>
+        </div>
+        <section>
+            <article id="playerBoard1">
+                <h2 id="play1">Player 1</h2>
+                <p>X</p>
+            </article>
+            <article id="gameBoard">
+                <table>
+                    <tr>
+                        <td class="caseJeu" id="c1"></td>
+                        <td class="caseJeu" id="c2"></td>
+                        <td class="caseJeu" id="c3"></td>
+                    </tr>
+                    <tr>
+                        <td class="caseJeu" id="c4"></td>
+                        <td class="caseJeu" id="c5"></td>
+                        <td class="caseJeu" id="c6"></td>
+                    </tr>
+                    <tr>
+                        <td class="caseJeu" id="c7"></td>
+                        <td class="caseJeu" id="c8"></td>
+                        <td class="caseJeu" id="c9"></td>
+                    </tr>
+                </table>
+                <input id="rafraichir" type="button" onclick='window.location.reload(false)' value="Recommencer une partie"/>
+                
+            </article>
+            <article id="playerBoard2">
+                <h2 id="play2">Player 2</h2>
+                <p>O</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <button id="startX">X Débute</button>
+        <p id="choixDepart">Veuillez choisir le joueur qui débutera</p>
+        <button id="startO">O Débute</button>
+    </footer> 
+    
+</body>
+</html>
