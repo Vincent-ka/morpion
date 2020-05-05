@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: 8vh;
+    background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(110,110,191,1) 27%, rgba(187,107,107,1) 73%, rgba(87,87,87,1) 100%);
+    background-size: 400% 400%;
+    animation: degrade 10s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid black;
+}
+
+header>h1 {
+    font-size: 50px;
+}
+#panneau {
+    background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(110,110,191,1) 27%, rgba(187,107,107,1) 73%, rgba(87,87,87,1) 100%);
+    background-size: 400% 400%;
+    animation: degrade 10s ease-in-out infinite;
+    width: 100%;
+    border-radius: 200px;
+    height: 50%;
+    position: absolute;
+    align-self: center;
+    opacity: .9;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+}
+#panneau>p {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#panneau>button {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    font-size: 20px;
+    border: none;
+    padding: 5px;
+    border-radius: 50px;
+}
+#panneau>button:focus {
+    outline: 0;
+}
+
+input {
+    border-radius: 50px;
+    text-align: center;
+    padding: 2px;
+    border: none;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+#startGame {
+    background-color: lightcoral;
+}
+#validerNom1 {
+    background-color: red;
+}
+#validerNom2 {
+    background-color: blue;
+}
+
+#validerNom1:hover, #validerNom2:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#startGame:hover {
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 3px;
+}
+
+main {
+    height: 84vh;
+    display: flex;
+}
+main>section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+#playerBoard1 {
+    width: 20%;
+    border-right: 2px solid black;
+    height: 100%;
+}
+#playerBoard1>h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+#playerBoard1>:nth-child(2) {
+    font-weight: bold;
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    padding-top: 150px;
+}
+#gameBoard {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+table {
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+td {
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    border: 1px solid black;
+}
+#playerBoard2 {
+    width: 20%;
+    height: 100%;
+    border-left: 2px solid black;
+}
+#playerBoard2>h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+#playerBoard2>p:nth-child(2) {
+    font-weight: bold;
+    font-size: 50px;
+    color: blue;
+    text-align: center;
+    padding-top: 150px;
+}
+footer {
+    background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(110,110,191,1) 27%, rgba(187,107,107,1) 73%, rgba(87,87,87,1) 100%);
+    background-size: 400% 400%;
+    animation: degrade 10s ease-in-out infinite;
+    position: absolute;
+    width: 100%;
+    height: 8vh;
+    bottom: 0;
+    border-top: 4px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer>p {
+    font-size: 20px;
+    text-decoration: underline;
+}
+#startX {
+    background: red;
+    border: 5px solid darkred;
+    color: white;
+   cursor: pointer; 
+   height: 100%;
+   transition: opacity 1s ease-in-out;
+}
+
+#startO {
+    background: blue;
+    border: 5px solid darkblue;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+#choixDepart {
+    transition: opacity 1s ease-in-out;
+}
+
+#startX:focus, #startO:focus {
+    outline: 0;
+}
+
+#tourPlayer1, #tourPlayer2 {
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding-top: 200px;
+}
+.pionX {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.pionO {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+#rafraichir {
+    display: none;
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: lightcoral;
+    font-size: 15px;
+    box-shadow: 2px 2px 1px 1px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#rafraichir:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+#rafraichir:hover {
+    cursor: pointer;
+}
+
+#rafraichir:focus {
+    outline: 0;
+}
+
+#annonceX, #annonceO {
+    text-align: center;
+    padding-top: 150px;
+    display: none;
+    font-size: 25px;
+}
+
+@keyframes degrade {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+}

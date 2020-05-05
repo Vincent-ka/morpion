@@ -1,0 +1,63 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js"></script>
+    <title>Morpion</title>
+</head>
+<body>
+    <header>
+        <h1>XooX</h1>
+    </header>
+
+    <main>
+        <div id="panneau">
+            <p>Bienvenue dans XooX. Veuillez choisir le nom du joueur.</p>
+            <input type="text" id="choiceName1" placeholder="Player 1">
+            <button id="validerNom1">Valider</button>
+            <button id="startGame">Commencer le jeu</button>
+        </div>
+        <section>
+            <article id="playerBoard1">
+                <h2 id="play1">Player 1</h2>
+                <p id="x">X</p>
+            </article>
+            <article id="gameBoard">
+                <table>
+                    <tr>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                    </tr>
+                    <tr>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                    </tr>
+                    <tr>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                        <td class="caseJeu"></td>
+                    </tr>
+                </table>
+                
+                
+                
+            </article>
+            <article id="playerBoard2">
+                <h2 id="play2">Ordi</h2>
+                <p id="o">O</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <button id="startX">X Débute</button>
+        <p id="choixDepart">Veuillez choisir le joueur qui débutera</p>
+        <input id="rafraichir" type="button" onclick='window.location.reload(false)' value="Recommencer une partie"/>
+        <button id="startO">O Débute</button>
+    </footer> 
+    
+</body>
+</html>
